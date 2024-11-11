@@ -14,7 +14,7 @@ import 'package:flutter/material.dart';
 ///
 /// Example usage with responsive widget:
 /// ```dart
-/// ResponsiveBuilder.responsive(
+/// TailwindResponsive.responsive(
 ///   context: context,
 ///   child: Text('Mobile Layout'), // Default for smallest screens
 ///   sm: Text('Tablet Layout'),    // For screens >= 640px
@@ -27,14 +27,14 @@ import 'package:flutter/material.dart';
 ///
 /// Example usage with responsive values:
 /// ```dart
-/// double padding = ResponsiveBuilder.value<double>(
+/// double padding = TailwindResponsive.value<double>(
 ///   context: context,
 ///   initial: 8,  // Mobile padding
 ///   sm: 16,      // Tablet padding
 ///   lg: 24,      // Desktop padding
 /// );
 /// ```
-class ResponsiveBuilder {
+class TailwindResponsive {
   /// Breakpoint for small screens (sm)
   /// Equivalent to Tailwind's sm breakpoint
   static const double smBreakpoint = 640;
@@ -63,7 +63,7 @@ class ResponsiveBuilder {
   /// 
   /// Example:
   /// ```dart
-  /// String currentBreakpoint = ResponsiveBuilder.getBreakpoint(context);
+  /// String currentBreakpoint = TailwindResponsive.getBreakpoint(context);
   /// print('Current breakpoint: $currentBreakpoint');
   /// ```
   static String getBreakpoint(BuildContext context) {
@@ -96,7 +96,7 @@ class ResponsiveBuilder {
   /// 
   /// Example:
   /// ```dart
-  /// ResponsiveBuilder.responsive(
+  /// TailwindResponsive.responsive(
   ///   context: context,
   ///   child: SingleChildScrollView(...), // Mobile layout
   ///   lg: Row(                          // Desktop layout
@@ -144,7 +144,7 @@ class ResponsiveBuilder {
   /// Example with different types:
   /// ```dart
   /// // Responsive padding
-  /// double padding = ResponsiveBuilder.value<double>(
+  /// double padding = TailwindResponsive.value<double>(
   ///   context: context,
   ///   initial: 8,
   ///   sm: 16,
@@ -152,14 +152,14 @@ class ResponsiveBuilder {
   /// );
   /// 
   /// // Responsive axis alignment
-  /// Axis direction = ResponsiveBuilder.value<Axis>(
+  /// Axis direction = TailwindResponsive.value<Axis>(
   ///   context: context,
   ///   initial: Axis.vertical,   // Mobile: Stack vertically
   ///   lg: Axis.horizontal,      // Desktop: Stack horizontally
   /// );
   /// 
   /// // Responsive grid columns
-  /// int columns = ResponsiveBuilder.value<int>(
+  /// int columns = TailwindResponsive.value<int>(
   ///   context: context,
   ///   initial: 1,  // Mobile: Single column
   ///   sm: 2,       // Tablet: Two columns

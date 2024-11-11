@@ -1,10 +1,10 @@
-# flutter_responsive_builder
+# tailwind_responsive_design
 
 A Flutter package that provides responsive design capabilities inspired by Tailwind CSS breakpoints and responsive utilities. Build adaptive Flutter UIs with ease using predefined breakpoints and intuitive APIs.
 
-[![pub package](https://img.shields.io/pub/v/flutter_responsive_builder.svg)](https://pub.dev/packages/flutter_responsive_builder)
-[![likes](https://img.shields.io/pub/likes/flutter_responsive_builder?logo=dart)](https://pub.dev/packages/flutter_responsive_builder/score)
-[![popularity](https://img.shields.io/pub/popularity/flutter_responsive_builder?logo=dart)](https://pub.dev/packages/flutter_responsive_builder/score)
+[![pub package](https://img.shields.io/pub/v/tailwind_responsive_design.svg)](https://pub.dev/packages/tailwind_responsive_design)
+[![likes](https://img.shields.io/pub/likes/tailwind_responsive_design?logo=dart)](https://pub.dev/packages/tailwind_responsive_design/score)
+[![popularity](https://img.shields.io/pub/popularity/tailwind_responsive_design?logo=dart)](https://pub.dev/packages/tailwind_responsive_design/score)
 
 ## Features
 
@@ -21,7 +21,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  flutter_responsive_builder: ^1.0.0
+  tailwind_responsive_design: ^1.0.0
 ```
 
 Then run:
@@ -49,9 +49,9 @@ The package uses the following breakpoints, matching Tailwind CSS conventions:
 Create widgets that adapt to different screen sizes:
 
 ```dart
-import 'package:flutter_responsive_builder/flutter_responsive_builder.dart';
+import 'package:tailwind_responsive_design/tailwind_responsive_design.dart';
 
-ResponsiveBuilder.responsive(
+TailwindResponsive.responsive(
   context: context,
   // Mobile layout (default)
   child: SingleChildScrollView(
@@ -83,7 +83,7 @@ Adapt any value based on screen size:
 
 ```dart
 // Responsive padding
-double padding = ResponsiveBuilder.value<double>(
+double padding = TailwindResponsive.value<double>(
   context: context,
   initial: 8,   // Mobile padding
   sm: 16,       // Tablet padding
@@ -91,14 +91,14 @@ double padding = ResponsiveBuilder.value<double>(
 );
 
 // Responsive layout direction
-Axis direction = ResponsiveBuilder.value<Axis>(
+Axis direction = TailwindResponsive.value<Axis>(
   context: context,
   initial: Axis.vertical,    // Stack vertically on mobile
   lg: Axis.horizontal,       // Stack horizontally on desktop
 );
 
 // Responsive grid columns
-int columns = ResponsiveBuilder.value<int>(
+int columns = TailwindResponsive.value<int>(
   context: context,
   initial: 1,  // Single column on mobile
   sm: 2,       // Two columns on tablet
@@ -111,7 +111,7 @@ int columns = ResponsiveBuilder.value<int>(
 Check the current breakpoint for conditional logic:
 
 ```dart
-String breakpoint = ResponsiveBuilder.getBreakpoint(context);
+String breakpoint = TailwindResponsive.getBreakpoint(context);
 print('Current breakpoint: $breakpoint'); // e.g., 'sm', 'md', 'lg'
 ```
 
@@ -121,13 +121,13 @@ Here's a complete example showing how to create a responsive layout:
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:flutter_responsive_builder/flutter_responsive_builder.dart';
+import 'package:tailwind_responsive_design/tailwind_responsive_design.dart';
 
 class ResponsivePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ResponsiveBuilder.responsive(
+      body: TailwindResponsive.responsive(
         context: context,
         // Mobile Layout
         child: Column(
@@ -137,7 +137,7 @@ class ResponsivePage extends StatelessWidget {
               child: ListView.builder(
                 itemCount: 20,
                 padding: EdgeInsets.all(
-                  ResponsiveBuilder.value<double>(
+                  TailwindResponsive.value<double>(
                     context: context,
                     initial: 8,
                     sm: 16,
@@ -174,7 +174,7 @@ class ResponsivePage extends StatelessWidget {
                   Expanded(
                     child: GridView.builder(
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: ResponsiveBuilder.value<int>(
+                        crossAxisCount: TailwindResponsive.value<int>(
                           context: context,
                           initial: 1,
                           lg: 2,
@@ -219,6 +219,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### Support
 
-If you find this package helpful, please give it a like on [pub.dev](https://pub.dev/packages/flutter_responsive_builder) ❤️
+If you find this package helpful, please give it a like on [pub.dev](https://pub.dev/packages/tailwind_responsive_design) ❤️
 
-For bugs or feature requests, please [create an issue](https://github.com/yourusername/flutter_responsive_builder/issues) on GitHub.
+For bugs or feature requests, please [create an issue](https://github.com/yourusername/tailwind_responsive_design/issues) on GitHub.

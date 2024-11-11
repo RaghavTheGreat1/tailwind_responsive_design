@@ -1,7 +1,7 @@
-name: flutter_responsive_builder
+name: tailwind_responsive_design
 description: "A Flutter package that provides responsive design capabilities inspired by Tailwind CSS breakpoints and responsive utilities."
 version: 1.0.0
-homepage: https://github.com/RaghavTheGreat1/flutter_responsive_builder
+homepage: https://github.com/RaghavTheGreat1/tailwind_responsive_design
 
 environment:
   sdk: ^3.5.4
