@@ -1,4 +1,4 @@
-## 1.0.0
+## 1.0.1
 
 * Update minimum Dart SDK requirement to 2.17.0 
 
