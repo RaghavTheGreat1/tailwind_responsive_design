@@ -221,4 +221,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you find this package helpful, please give it a like on [pub.dev](https://pub.dev/packages/tailwind_responsive_design) ❤️
 
-For bugs or feature requests, please [create an issue](https://github.com/yourusername/tailwind_responsive_design/issues) on GitHub.
+For bugs or feature requests, please [create an issue](https://github.com/RaghavTheGreat1/tailwind_responsive_design/issues) on GitHub.
